@@ -273,3 +273,6 @@ __marimo__/
 *.pth
 *.pkl
 *.safetensors
+*.bin
+*.json
+*.jsonl
