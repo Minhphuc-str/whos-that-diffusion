@@ -269,3 +269,5 @@ __marimo__/
 # 3D Images
 *.3dm
 *.max
+
+*.pth
